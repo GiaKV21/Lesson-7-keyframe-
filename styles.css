@@ -1,0 +1,81 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.road {
+  position: fixed;
+  bottom: 0;
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines {
+  box-sizing: border-box;
+  border: 4px dashed #fff;
+  width: 200%;
+  position: absolute;
+  top: 40%;
+  animation: road 10s linear infinite;
+  animation-delay: 1s;
+}
+
+.lines2 {
+  box-sizing: border-box;
+  border: 4px dashed #fff;
+  width: 200%;
+  position: absolute;
+  top: 50%;
+  animation: road-lines2 10s linear infinite;
+  animation-delay: 1s;
+}
+
+.mario {
+  position: absolute;
+  top: -50px;
+  animation-name: drive;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.luigi {
+  position: absolute;
+  left: 90%;
+  top: 40px;
+  transform: scaleX(-1);
+}
+
+@keyframes drive {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(500px);
+  }
+}
+
+@keyframes road {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes road-lines2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
